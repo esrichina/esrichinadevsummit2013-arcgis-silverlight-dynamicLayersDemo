@@ -1,0 +1,35 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				TCB
+			</Title>
+			<Shortcut>TCB</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[ClassBreaksDefinition classBreaksDefinition = new ClassBreaksDefinition()
+			{
+				ClassificationField = "SDE.china_county.AREA",
+				ClassificationMethod = ClassificationMethod.StandardDeviation,
+				BreakCount = 10,
+				StandardDeviationInterval = ESRI.ArcGIS.Client.Tasks.StandardDeviationInterval.OneQuarter
+			};
+			classBreaksDefinition.ColorRamps.Add(new ColorRamp()
+			{
+				From = Colors.Blue,
+				To = Colors.Red,
+				Algorithm = Algorithm.HSVAlgorithm
+			});
+
+			GenerateRendererParameters rendererParams = new GenerateRendererParameters()
+			{
+				ClassificationDefinition = classBreaksDefinition,
+				Source = info.Source
+			};
+
+			generateRendererTask.ExecuteAsync(rendererParams, rendererParams.Where);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

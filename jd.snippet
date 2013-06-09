@@ -1,0 +1,45 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				JD
+			</Title>
+			<Shortcut>JD</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[DynamicLayerInfo info = new DynamicLayerInfo()
+			{
+				ID = 1,
+				Source = new LayerDataSource()
+				{
+
+					DataSource = new JoinDataSource()
+					{
+
+						JoinType = JoinType.LeftInnerJoin,
+						LeftTableSource = new LayerDataSource()
+						{
+							DataSource = new TableDataSource()
+							{
+								DataSourceName = "SDE.china_county",
+								WorkspaceID = "MyDatabaseWorkspaceID"
+							}
+						},
+						LeftTableKey = "OBJECTID",
+						RightTableSource = new LayerDataSource()
+						{
+							DataSource = new TableDataSource()
+							{
+								DataSourceName = "SDE.china_road",
+								WorkspaceID = "MyDatabaseWorkspaceID"
+							}
+						},
+						RightTableKey = "OBJECTID"
+					}
+				}
+			};]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

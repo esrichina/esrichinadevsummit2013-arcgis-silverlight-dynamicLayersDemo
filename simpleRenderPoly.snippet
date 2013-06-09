@@ -1,0 +1,26 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				SRP
+			</Title>
+			<Shortcut>SRP</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[			LayerDrawingOptions layerDrawOptions = new LayerDrawingOptions();
+			layerDrawOptions.LayerID = 1;
+			layerDrawOptions.Renderer = new SimpleRenderer()
+			{
+				Symbol = new SimpleFillSymbol()
+				{
+					Fill = new SolidColorBrush(Color.FromArgb((int)255, (int)0, (int)0, (int)255)),
+				}
+			};
+
+			layer.LayerDrawingOptions =
+					new LayerDrawingOptionsCollection() { layerDrawOptions };]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

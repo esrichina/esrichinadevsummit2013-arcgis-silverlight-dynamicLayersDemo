@@ -1,0 +1,32 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				QUV
+			</Title>
+			<Shortcut>QUV</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[UniqueValueDefinition uniqueValueDefinition = new UniqueValueDefinition()
+			{
+				Fields = new List<string>() { "FNODE_" }
+			};
+			uniqueValueDefinition.ColorRamps.Add(new ColorRamp()
+			{
+				From = Colors.Blue,
+				To = Colors.Red,
+				Algorithm = Algorithm.CIELabAlgorithm
+			});
+
+			GenerateRendererParameters rendererParams = new GenerateRendererParameters()
+			{
+				ClassificationDefinition = uniqueValueDefinition,
+				Source = info.Source
+			};
+
+			generateRendererTask.ExecuteAsync(rendererParams, rendererParams.Where);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

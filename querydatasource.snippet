@@ -1,0 +1,28 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>
+				QD
+			</Title>
+			<Shortcut>QD</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+				<![CDATA[DynamicLayerInfo info = new DynamicLayerInfo()
+			{
+				ID = 1,
+				Source = new LayerDataSource()
+				{
+					DataSource = new QueryDataSource()
+					{
+						GeometryType = ESRI.ArcGIS.Client.Tasks.GeometryType.Polyline,
+						OIDFields = new string[] { "OBJECTID" },
+						Query = "SELECT * FROM  SDE.china_road where FNODE_ > 1000",
+						WorkspaceID = "MyDatabaseWorkspaceID"
+					}
+				}
+			};]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
